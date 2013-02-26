@@ -6,17 +6,17 @@ require 'carrierwave/version'
 require 'date'
 
 Gem::Specification.new do |s|
-  s.name = "carrierwave"
+  s.name = "carrierwave-gridfs"
   s.version = CarrierWave::VERSION
 
-  s.authors = ["Jonas Nicklas"]
+  s.authors = ["Alex & Matt"]
   s.date = Date.today
   s.description = "Upload files in your Ruby applications, map them to a range of ORMs, store them on different backends."
   s.summary = "Ruby file upload library"
   s.email = ["jonas.nicklas@gmail.com"]
   s.extra_rdoc_files = ["README.md"]
   s.files = Dir.glob("{bin,lib}/**/*") + %w(README.md)
-  s.homepage = %q{https://github.com/jnicklas/carrierwave}
+  s.homepage = %q{https://github.com/calculon83/carrierwave-gridfs/edit/master/carrierwave-gridfs.gemspec}
   s.rdoc_options = ["--main"]
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{carrierwave}
