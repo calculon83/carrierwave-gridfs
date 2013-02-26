@@ -21,6 +21,14 @@ module CarrierWave
         add_config :move_to_cache
         add_config :move_to_store
         add_config :remove_previously_stored_files_after_update
+        
+        #grif_fs
+        add_config :grid_fs_database
+        add_config :grid_fs_host
+        add_config :grid_fs_port
+        add_config :grid_fs_username
+        add_config :grid_fs_password
+        add_config :grid_fs_access_url
 
         # fog
         add_config :fog_attributes
@@ -37,7 +45,7 @@ module CarrierWave
         add_config :validate_integrity
         add_config :validate_processing
         add_config :validate_download
-        add_config :mount_on
+        add_config :mount_on      
 
         # set default values
         reset_config
@@ -119,7 +127,8 @@ module CarrierWave
             config.directory_permissions = 0755
             config.storage_engines = {
               :file => "CarrierWave::Storage::File",
-              :fog  => "CarrierWave::Storage::Fog"
+              :fog  => "CarrierWave::Storage::Fog",
+              :grid_fs => "CarrierWave::Storage::GridFS"
             }
             config.storage = :file
             config.fog_attributes = {}
