@@ -1,6 +1,6 @@
-# CarrierWave
+# CarrierWave - Gridfs
 
-This gem provides a simple and extremely flexible way to upload files from Ruby applications.
+This gem adds gridfs support back into the carrierwave gem. Carrierwave is a simple and extremely flexible way to upload files from Ruby applications.
 It works well with Rack based web applications, such as Ruby on Rails.
 
 [![Build Status](https://secure.travis-ci.org/jnicklas/carrierwave.png)](http://travis-ci.org/jnicklas/carrierwave)
