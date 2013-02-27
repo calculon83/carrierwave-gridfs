@@ -53,6 +53,7 @@ module CarrierWave
         protected
 
         def database
+        if @uploader.grid_fs_host.nil?
           @connection ||= begin
             host = @uploader.grid_fs_host
             port = @uploader.grid_fs_port
@@ -62,6 +63,10 @@ module CarrierWave
             db = Mongo::Connection.new(host, port).db(database)
             db.authenticate(username, password) if username && password
             db
+          end
+          else
+          @connection ||= begin
+            @uploader.grid_fs.host.connection
           end
         end
 
