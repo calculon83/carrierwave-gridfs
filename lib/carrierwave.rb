@@ -18,6 +18,12 @@ module CarrierWave
       CarrierWave::Uploader::Base.clean_cached_files!(seconds)
     end
   end
+  
+  module Storage
+    autoload :Abstract, 'carrierwave/storage/abstract'
+    autoload :File, 'carrierwave/storage/file'    
+    autoload :GridFS, 'carrierwave/storage/grid_fs'        
+  end
 
 end
 
@@ -61,8 +67,6 @@ elsif defined?(Sinatra)
     end
   end
 end
-
-CarrierWave::Storage.autoload :GridFS, 'carrierwave/storage/grid_fs'
 
 require "carrierwave/error"
 require "carrierwave/sanitized_file"
