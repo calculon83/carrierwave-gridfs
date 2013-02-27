@@ -7,3 +7,4 @@ rescue LoadError
 end
 
 require "carrierwave/storage/fog" if defined?(Fog)
+require "carrierwave/storage/grid_fs"
