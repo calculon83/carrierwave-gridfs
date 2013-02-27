@@ -62,6 +62,8 @@ elsif defined?(Sinatra)
   end
 end
 
+CarrierWave::Storage.autoload :GridFS, 'carrierwave/storage/grid_fs'
+
 require "carrierwave/error"
 require "carrierwave/sanitized_file"
 require "carrierwave/mount"
