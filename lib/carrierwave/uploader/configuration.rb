@@ -29,6 +29,7 @@ module CarrierWave
         add_config :grid_fs_username
         add_config :grid_fs_password
         add_config :grid_fs_access_url
+        add_config :grid_fs_connection
 
         # fog
         add_config :fog_attributes
